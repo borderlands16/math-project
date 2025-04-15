@@ -1,7 +1,6 @@
 "use strict";
 
 globalThis.i18n = {
-
 	'matrix.method.gauss': "Метод Гауса",
 	'matrix.method.montante': "Метод Гауса-Монтанте (алгоритм Барейса)",
 	'matrix.rule.sarrus': "Правило Саррюса",
@@ -14,7 +13,6 @@ globalThis.i18n = {
 	'matrix.identity': "Одинична матриця",
 	'matrix.row.notation': "<msub><mi>R</mi><mn>${i}</mn></msub>",
 	'matrix.identity.notation': "I",
-
 	'eigen.vectors.forMatrixA': "Власні вектори для матриці A:",
 	'eigen.definition': "За визначенням, власний вектор, що відповідає власному значенню ${λ}, задовольняє рівняння: ${A*v=λ*v}",
 	'eigen.nonZeroSolutionCondition': "Рівняння матиме ненульовий розв'язок тоді і тільки тоді, коли виконується умова ${|(А-λI)|=0}",
@@ -22,84 +20,65 @@ globalThis.i18n = {
 	'eigen.findForEachValue': "Для кожного власного значення λ знайдемо відповідні власні вектори:",
 	'eigen.noRationalSolutions': "Раціональних розв'язків не існує.",
 	'eigen.letAssumption': "Припустимо, що",
-	'eigen.jordanValue': "Власне значення",
 	'eigen.valuesOfA': "власні значення матриці A",
-
 	'system.noSolutions': "Розв'язків не існує.",
-	'system.findVariableFromEquation': "З рівняння ${i} системи ${#system_1} визначимо змінну ${x}:",
+	'system.findVariableFromEquation': "З рівняння ${i} системи визначимо змінну ${x}:",
 	'system.answer': "Отримана відповідь:",
 	'system.generalSolution': "Загальний розв'язок:",
 	'system.fundamentalSolution': "Фундаментальна система розв'язань:",
-
 	'elimination.pivotElement': "Опорний елемент:",
 	'elimination.rowSwapNegate': "Поміняємо місцями рядок ${i} та рядок ${j}, при цьому помноживши рядок ${i} на ${-1}:",
 	'elimination.rowSwap': "Поміняємо місцями рядок ${i} та рядок ${j}:",
 	'elimination.rowDivision': "Рядок ${j} ділимо на ${a}:",
 	'elimination.rowSubtraction': "Віднімаємо від рядка ${j} рядок ${i}, помножений на ${a}, щоб отримати нулі під головним елементом:",
-
 	'math.exponential.then': "Отже:",
 	'ui.details': "Подробиці",
-	'math.newtonMethod': "",
-
-	'link.triangleRule': "",
-	'link.sarrusRule': "",
-	'link.eigenvalueEquation': "",
-	'link.rationalRootTest': "",
-	'link.quadraticEquation': "",
-	'link.palindromicEquation': "",
-	'link.binomialTheorem': "",
-	'link.cubicEquation': "",
-	'link.quarticEquation': "",
-	'link.differenceOfSquares': "",
-	'link.differenceOfCubes': "",
-	'link.differenceOfNthPowers': "",
-	'link.kroneckerMethod': "",
 };
 
-s1_BigIntWrapper();
-s2_NthRoot();
-s3_GCD();
-s4_IsPrime64();
-s5_Prime();
-s6_PollardsRho();
-s7_BitSetSparseSolver();
-s8_TonelliShanks();
-s9_QuadraticSieve();
-s10_ECM();
-s11_ModularCRT();
-s12_FactorizationAlgos();
-s13_BigDecimal();
-s14_BigDecimalMath();
-s15_NewtonInterpolation();
-s16_SymbolicAlgebra();
-s17_IntervalArithmetic();
-s18_GF2();
-s19_Trigonometry();
-s20_ComplexNumbers();
-s21_NonSimplifiedExpression();
-s22_ExpressionParser();
-s23_BinaryHeap();
-s24_Polynomial();
-s25_MatrixClass();
-s26_Combinations();
-s27_BinaryPacking();
-s28_IntegerPolynomial();
-s29_LLL();
-s30_FastLLL();
-s31_PolynomialFactorization();
-s32_SeedRandom();
-s33_RealAlgebraicNumbers();
-s34_SomePolynomialRoot();
-s35_PolynomialRootMath();
-s36_PolynomialWasm();
-s38_Eigenvalues();
-s39_ConditionClass();
-s40_MathMLRendering();
-s41_QuadraticInteger();
-s42_MatrixExpressions();
-s43_LinearSystems();
+BigIntWrapper();
+NthRoot();
+GCD();
+IsPrime64();
+Prime();
+PollardsRho();
+BitSetSparseSolver();
+TonelliShanks();
+QuadraticSieve();
+ECM();
+ModularCRT();
+FactorizationAlgos();
+BigDecimal();
+BigDecimalMath();
+NewtonInterpolation();
+SymbolicAlgebra();
+IntervalArithmetic();
+GF2();
+Trigonometry();
+ComplexNumbers();
+NonSimplifiedExpression();
+ExpressionParser();
+BinaryHeap();
+Polynomial();
+MatrixClass();
+Combinations();
+BinaryPacking();
+IntegerPolynomial();
+LLL();
+FastLLL();
+PolynomialFactorization();
+SeedRandom();
+RealAlgebraicNumbers();
+SomePolynomialRoot();
+PolynomialRootMath();
+PolynomialWasm();
+Eigenvalues();
+ConditionClass();
+MathMLRendering();
+QuadraticInteger();
+MatrixExpressions();
+LinearSystems();
 
-function s1_BigIntWrapper() {
+function BigIntWrapper() {
 	function BigIntWrapper() {
 	}
 
@@ -605,7 +584,7 @@ function s1_BigIntWrapper() {
 	initB1B2();
 }
 
-function s2_NthRoot() {
+function NthRoot() {
 	function nthRoot(S, n) {
 		if (!(S instanceof JSBI) || typeof n !== 'number' || Math.floor(n) !== n || n < 1 || n > Number.MAX_SAFE_INTEGER) {
 			throw new RangeError();
@@ -659,7 +638,7 @@ function s2_NthRoot() {
 	self.nthRoot = nthRoot;
 }
 
-function s3_GCD() {
+function GCD() {
 	var SUBQUADRATIC_GCD_THRESHOLD = 32 * 1024;
 	var SUBQUADRATIC_HALFGCD_THRESHOLD = 4096;
 	var DOUBLE_DIGIT_METHOD = true;
@@ -1327,12 +1306,12 @@ function s3_GCD() {
 	gcd.invmod = invmod;
 }
 
-function s4_IsPrime64() {
+function IsPrime64() {
 	var isPrime64 = typeof WebAssembly !== 'undefined' ? new WebAssembly.Instance(new WebAssembly.Module(new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 14, 2, 96, 4, 126, 126, 126, 126, 1, 126, 96, 1, 126, 1, 127, 3, 3, 2, 0, 1, 7, 13, 1, 9, 105, 115, 80, 114, 105, 109, 101, 54, 52, 0, 1, 10, 129, 8, 2, 174, 1, 1, 4, 126, 32, 0, 66, 32, 136, 34, 5, 32, 1, 66, 255, 255, 255, 255, 15, 131, 34, 4, 126, 32, 0, 66, 255, 255, 255, 255, 15, 131, 34, 6, 32, 4, 126, 66, 32, 136, 124, 33, 7, 32, 1, 66, 32, 136, 34, 4, 32, 5, 126, 32, 7, 66, 32, 136, 124, 32, 4, 32, 6, 126, 32, 7, 66, 255, 255, 255, 255, 15, 131, 124, 66, 32, 136, 124, 34, 4, 32, 0, 32, 1, 126, 32, 3, 126, 34, 0, 66, 32, 136, 34, 1, 32, 2, 66, 32, 136, 34, 3, 126, 32, 2, 66, 255, 255, 255, 255, 15, 131, 34, 5, 32, 1, 126, 32, 0, 66, 255, 255, 255, 255, 15, 131, 34, 0, 32, 5, 126, 66, 32, 136, 124, 34, 1, 66, 32, 136, 124, 32, 0, 32, 3, 126, 32, 1, 66, 255, 255, 255, 255, 15, 131, 124, 66, 32, 136, 124, 34, 0, 125, 32, 2, 66, 0, 32, 0, 32, 4, 86, 27, 124, 11, 206, 6, 2, 11, 126, 1, 127, 32, 0, 66, 2, 84, 4, 64, 65, 0, 15, 11, 32, 0, 66, 1, 131, 80, 4, 64, 32, 0, 66, 2, 81, 15, 11, 32, 0, 66, 3, 130, 80, 4, 64, 32, 0, 66, 3, 81, 15, 11, 32, 0, 66, 5, 130, 80, 4, 64, 32, 0, 66, 5, 81, 15, 11, 32, 0, 66, 7, 130, 80, 4, 64, 32, 0, 66, 7, 81, 15, 11, 32, 0, 66, 11, 130, 80, 4, 64, 32, 0, 66, 11, 81, 15, 11, 32, 0, 66, 13, 130, 80, 4, 64, 32, 0, 66, 13, 81, 15, 11, 32, 0, 66, 17, 130, 80, 4, 64, 32, 0, 66, 17, 81, 15, 11, 32, 0, 66, 19, 130, 80, 4, 64, 32, 0, 66, 19, 81, 15, 11, 32, 0, 66, 23, 130, 80, 4, 64, 32, 0, 66, 23, 81, 15, 11, 32, 0, 66, 29, 130, 80, 4, 64, 32, 0, 66, 29, 81, 15, 11, 32, 0, 66, 31, 130, 80, 4, 64, 32, 0, 66, 31, 81, 15, 11, 32, 0, 66, 217, 10, 84, 4, 64, 65, 1, 15, 11, 32, 0, 66, 1, 125, 34, 1, 122, 33, 7, 32, 1, 32, 7, 136, 33, 4, 32, 0, 33, 1, 65, 2, 33, 12, 3, 64, 32, 12, 65, 192, 0, 72, 4, 64, 32, 1, 66, 2, 32, 0, 32, 1, 126, 125, 126, 33, 1, 32, 12, 32, 12, 106, 33, 12, 12, 1, 11, 11, 32, 1, 33, 5, 66, 1, 33, 3, 66, 127, 32, 0, 130, 66, 1, 124, 33, 1, 3, 64, 32, 3, 66, 0, 82, 4, 64, 32, 3, 66, 1, 131, 167, 4, 64, 32, 2, 32, 0, 32, 1, 125, 34, 6, 125, 32, 0, 66, 0, 32, 2, 32, 6, 84, 27, 124, 33, 2, 11, 32, 1, 32, 0, 32, 1, 125, 34, 6, 125, 32, 0, 66, 0, 32, 1, 32, 6, 84, 27, 124, 33, 1, 32, 3, 66, 1, 136, 33, 3, 12, 1, 11, 11, 2, 126, 66, 4, 32, 0, 66, 255, 15, 84, 13, 0, 26, 66, 12, 32, 0, 66, 213, 235, 211, 0, 84, 13, 0, 26, 66, 44, 32, 0, 66, 177, 227, 137, 12, 84, 13, 0, 26, 66, 172, 1, 32, 0, 66, 199, 251, 133, 253, 11, 84, 13, 0, 26, 66, 172, 17, 32, 0, 66, 187, 220, 255, 249, 209, 62, 84, 13, 0, 26, 66, 172, 209, 0, 32, 0, 66, 223, 185, 224, 185, 144, 229, 0, 84, 13, 0, 26, 66, 172, 209, 8, 32, 0, 66, 193, 145, 203, 149, 181, 212, 205, 0, 84, 34, 12, 13, 0, 26, 66, 172, 209, 40, 32, 12, 13, 0, 26, 66, 172, 209, 168, 4, 32, 0, 66, 251, 243, 235, 252, 244, 164, 228, 138, 53, 84, 13, 0, 26, 66, 172, 209, 168, 132, 138, 4, 11, 33, 9, 3, 64, 32, 9, 66, 0, 82, 4, 64, 32, 9, 66, 1, 32, 9, 122, 34, 3, 134, 133, 33, 9, 66, 0, 33, 1, 66, 127, 32, 0, 130, 66, 1, 124, 33, 6, 3, 64, 32, 3, 66, 0, 82, 4, 64, 32, 3, 66, 1, 131, 167, 4, 64, 32, 1, 32, 0, 32, 6, 125, 34, 8, 125, 32, 0, 66, 0, 32, 1, 32, 8, 84, 27, 124, 33, 1, 11, 32, 6, 32, 0, 32, 6, 125, 34, 8, 125, 32, 0, 66, 0, 32, 6, 32, 8, 84, 27, 124, 33, 6, 32, 3, 66, 1, 136, 33, 3, 12, 1, 11, 11, 32, 1, 33, 3, 32, 4, 33, 6, 66, 0, 33, 1, 66, 1, 33, 8, 66, 127, 32, 0, 130, 66, 1, 124, 33, 10, 3, 64, 32, 8, 66, 0, 82, 4, 64, 32, 8, 66, 1, 131, 167, 4, 64, 32, 1, 32, 0, 32, 10, 125, 34, 11, 125, 32, 0, 66, 0, 32, 1, 32, 11, 84, 27, 124, 33, 1, 11, 32, 10, 32, 0, 32, 10, 125, 34, 11, 125, 32, 0, 66, 0, 32, 10, 32, 11, 84, 27, 124, 33, 10, 32, 8, 66, 1, 136, 33, 8, 12, 1, 11, 11, 3, 64, 32, 6, 66, 0, 82, 4, 64, 32, 6, 66, 1, 131, 167, 4, 64, 32, 1, 32, 3, 32, 0, 32, 5, 16, 0, 33, 1, 11, 32, 6, 66, 1, 136, 33, 6, 32, 3, 32, 3, 32, 0, 32, 5, 16, 0, 33, 3, 12, 1, 11, 11, 66, 0, 33, 3, 65, 0, 33, 12, 3, 64, 32, 12, 172, 32, 7, 83, 4, 64, 32, 1, 32, 1, 32, 0, 32, 5, 16, 0, 34, 3, 32, 2, 81, 32, 1, 32, 2, 82, 113, 32, 1, 32, 0, 32, 2, 125, 82, 113, 4, 64, 65, 0, 15, 11, 32, 3, 33, 1, 32, 12, 65, 1, 106, 33, 12, 12, 1, 11, 11, 32, 2, 32, 3, 82, 4, 64, 65, 0, 15, 11, 12, 1, 11, 11, 65, 1, 11]))).exports.isPrime64 : null;
 	self.isPrime64 = isPrime64;
 }
 
-function s5_Prime() {
+function Prime() {
 	function log2(x) {
 		return JSBI.BigInt(x.toString(16).length * 4);
 	}
@@ -1454,12 +1433,12 @@ function s5_Prime() {
 	self.isPrime = isPrime;
 };
 
-function s6_PollardsRho() {
+function PollardsRho() {
 	var PollardsRho64 = typeof WebAssembly !== 'undefined' ? new WebAssembly.Instance(new WebAssembly.Module(new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 28, 4, 96, 2, 126, 126, 1, 126, 96, 4, 126, 126, 126, 126, 1, 126, 96, 3, 126, 126, 127, 1, 126, 96, 2, 126, 127, 1, 126, 3, 5, 4, 0, 1, 2, 3, 7, 29, 2, 9, 103, 99, 100, 66, 105, 110, 97, 114, 121, 0, 0, 13, 80, 111, 108, 108, 97, 114, 100, 115, 82, 104, 111, 54, 52, 0, 3, 10, 246, 6, 4, 98, 2, 2, 126, 1, 127, 32, 0, 80, 4, 64, 32, 1, 15, 11, 32, 1, 80, 4, 64, 32, 0, 15, 11, 32, 0, 32, 1, 132, 122, 33, 3, 32, 0, 32, 0, 122, 136, 33, 0, 32, 1, 32, 1, 122, 136, 33, 1, 3, 64, 32, 1, 32, 0, 125, 32, 0, 32, 1, 125, 32, 0, 32, 1, 84, 34, 4, 27, 33, 2, 32, 0, 32, 1, 32, 4, 27, 33, 1, 32, 2, 32, 2, 122, 136, 34, 0, 66, 0, 82, 13, 0, 11, 32, 1, 32, 3, 134, 11, 174, 1, 1, 4, 126, 32, 0, 66, 32, 136, 34, 5, 32, 1, 66, 255, 255, 255, 255, 15, 131, 34, 4, 126, 32, 0, 66, 255, 255, 255, 255, 15, 131, 34, 6, 32, 4, 126, 66, 32, 136, 124, 33, 7, 32, 1, 66, 32, 136, 34, 4, 32, 5, 126, 32, 7, 66, 32, 136, 124, 32, 4, 32, 6, 126, 32, 7, 66, 255, 255, 255, 255, 15, 131, 124, 66, 32, 136, 124, 34, 4, 32, 0, 32, 1, 126, 32, 3, 126, 34, 0, 66, 32, 136, 34, 1, 32, 2, 66, 32, 136, 34, 3, 126, 32, 2, 66, 255, 255, 255, 255, 15, 131, 34, 5, 32, 1, 126, 32, 0, 66, 255, 255, 255, 255, 15, 131, 34, 0, 32, 5, 126, 66, 32, 136, 124, 34, 1, 66, 32, 136, 124, 32, 0, 32, 3, 126, 32, 1, 66, 255, 255, 255, 255, 15, 131, 124, 66, 32, 136, 124, 34, 0, 125, 32, 2, 66, 0, 32, 0, 32, 4, 86, 27, 124, 11, 160, 4, 2, 8, 126, 5, 127, 32, 0, 33, 4, 65, 2, 33, 13, 3, 64, 32, 13, 65, 192, 0, 72, 4, 64, 32, 4, 66, 2, 32, 0, 32, 4, 126, 125, 126, 33, 4, 32, 13, 32, 13, 106, 33, 13, 12, 1, 11, 11, 32, 4, 33, 6, 66, 2, 33, 7, 66, 127, 32, 0, 130, 66, 1, 124, 33, 4, 3, 64, 32, 7, 66, 0, 82, 4, 64, 32, 7, 66, 1, 131, 167, 4, 64, 32, 3, 32, 0, 32, 4, 125, 34, 8, 125, 32, 0, 66, 0, 32, 3, 32, 8, 84, 27, 124, 33, 3, 11, 32, 4, 32, 0, 32, 4, 125, 34, 8, 125, 32, 0, 66, 0, 32, 4, 32, 8, 84, 27, 124, 33, 4, 32, 7, 66, 1, 136, 33, 7, 12, 1, 11, 11, 66, 127, 32, 0, 130, 66, 1, 124, 33, 7, 3, 64, 32, 1, 66, 0, 82, 4, 64, 32, 1, 66, 1, 131, 167, 4, 64, 32, 5, 32, 0, 32, 7, 125, 34, 4, 125, 32, 0, 66, 0, 32, 4, 32, 5, 86, 27, 124, 33, 5, 11, 32, 7, 32, 0, 32, 7, 125, 34, 4, 125, 32, 0, 66, 0, 32, 4, 32, 7, 86, 27, 124, 33, 7, 32, 1, 66, 1, 136, 33, 1, 12, 1, 11, 11, 65, 1, 33, 13, 66, 1, 33, 4, 32, 3, 33, 1, 3, 64, 32, 2, 32, 11, 79, 4, 64, 32, 1, 33, 7, 3, 64, 32, 1, 32, 1, 32, 0, 32, 6, 16, 1, 34, 1, 32, 0, 32, 5, 125, 34, 8, 125, 32, 0, 66, 0, 32, 1, 32, 8, 84, 27, 124, 33, 1, 32, 11, 65, 1, 106, 34, 11, 32, 13, 65, 3, 108, 65, 2, 118, 77, 4, 126, 66, 1, 33, 4, 32, 11, 33, 12, 32, 1, 5, 32, 7, 32, 1, 125, 32, 1, 32, 7, 125, 32, 1, 32, 7, 84, 27, 33, 8, 32, 4, 66, 1, 81, 4, 126, 32, 8, 5, 32, 4, 32, 8, 32, 0, 32, 6, 16, 1, 11, 33, 4, 32, 11, 65, 255, 0, 113, 69, 32, 11, 32, 13, 70, 114, 32, 14, 114, 4, 126, 2, 126, 32, 0, 32, 4, 80, 13, 0, 26, 32, 4, 32, 0, 80, 13, 0, 26, 32, 0, 32, 4, 132, 122, 33, 9, 32, 4, 32, 4, 122, 136, 33, 8, 32, 0, 32, 0, 122, 136, 33, 4, 3, 64, 32, 4, 32, 8, 125, 32, 8, 32, 4, 125, 32, 4, 32, 8, 86, 34, 15, 27, 33, 10, 32, 8, 32, 4, 32, 15, 27, 33, 4, 32, 10, 32, 10, 122, 136, 34, 8, 66, 0, 82, 13, 0, 11, 32, 4, 32, 9, 134, 11, 34, 4, 66, 1, 82, 4, 64, 32, 0, 32, 4, 82, 4, 64, 32, 4, 15, 11, 32, 14, 4, 64, 32, 0, 15, 11, 65, 1, 33, 14, 32, 12, 33, 11, 32, 3, 33, 1, 11, 66, 1, 33, 4, 32, 11, 33, 12, 32, 1, 5, 32, 3, 11, 11, 33, 3, 32, 11, 32, 13, 71, 13, 0, 11, 32, 13, 65, 1, 116, 33, 13, 12, 1, 11, 11, 66, 0, 11, 63, 1, 2, 126, 32, 0, 66, 2, 88, 4, 64, 66, 0, 15, 11, 32, 0, 66, 1, 131, 80, 4, 64, 66, 2, 15, 11, 3, 64, 32, 2, 66, 1, 124, 34, 2, 66, 42, 86, 4, 64, 66, 0, 15, 11, 32, 0, 32, 2, 32, 1, 16, 2, 34, 3, 32, 0, 81, 13, 0, 11, 32, 3, 11]))).exports.PollardsRho64 : null;
 	self.PollardsRho64 = PollardsRho64;
 }
 
-function s7_BitSetSparseSolver() {
+function BitSetSparseSolver() {
 	function packedArray(n) {
 
 		var array = [];
@@ -1901,7 +1880,7 @@ function s7_BitSetSparseSolver() {
 	self.solve = solve;
 }
 
-function s8_TonelliShanks() {
+function TonelliShanks() {
 	function modPowSmall(base, exponent, modulus) {
 		var accumulator = 1;
 		while (exponent !== 0) {
@@ -1995,7 +1974,7 @@ function s8_TonelliShanks() {
 	self.sqrtMod = sqrtMod;
 }
 
-function s9_QuadraticSieve() {
+function QuadraticSieve() {
 	function modInverse(a, m) {
 		if (typeof a !== 'bigint' || typeof m !== 'bigint') {
 			throw new TypeError();
@@ -3671,7 +3650,7 @@ function s9_QuadraticSieve() {
 	self.QuadraticSieveFactorization = QuadraticSieveFactorization;
 }
 
-function s10_ECM() {
+function ECM() {
 	function primes(MAX) {
 		var sieve = new Uint8Array(MAX + 1).fill(-1);
 		var result = [];
@@ -4870,7 +4849,7 @@ function s10_ECM() {
 	}
 }
 
-function s11_ModularCRT() {
+function ModularCRT() {
 	function modInverseSmall(a, m) {
 		a = +a;
 		m = +m;
@@ -5003,7 +4982,7 @@ function s11_ModularCRT() {
 	self.CRT = CRT;
 }
 
-function s12_FactorizationAlgos() {
+function FactorizationAlgos() {
 	globalThis.QuadraticSieveFactorization = QuadraticSieveFactorization;
 	globalThis.PollardsRho64 = PollardsRho64;
 
@@ -5426,7 +5405,7 @@ function s12_FactorizationAlgos() {
 	self.primeFactor = primeFactor;
 }
 
-function s13_BigDecimal() {
+function BigDecimal() {
 	var factory = function (BASE, format) {
 		format = format == undefined ? null : format;
 		var BIGINT_BASE = JSBI.BigInt(BASE);
@@ -6292,7 +6271,7 @@ function s13_BigDecimal() {
 	self.Decimal128 = Decimal128;
 }
 
-function s14_BigDecimalMath() {
+function BigDecimalMath() {
 	function addMath(BigDecimal, BASE) {
 		var BASE_LOG2_INV = 1 / Math.log2(BASE);
 		var BIGINT_BASE = JSBI.BigInt(BASE);
@@ -6779,7 +6758,7 @@ function s14_BigDecimalMath() {
 	self.addMath = addMath;
 }
 
-function s15_NewtonInterpolation() {
+function NewtonInterpolation() {
 	var DefaultYField = {
 		ONE: 1,
 		sub: function (a, b) {
@@ -6926,7 +6905,7 @@ function s15_NewtonInterpolation() {
 	self.NewtonInterpolation = NewtonInterpolation;
 }
 
-function s16_SymbolicAlgebra() {
+function SymbolicAlgebra() {
 	globalThis.bigIntGCD = globalThis.bigIntGCD || globalThis.gcd;
 	globalThis.halfgcd = bigIntGCD.halfgcd;
 	globalThis.gcdext = bigIntGCD.gcdext;
@@ -13449,7 +13428,7 @@ function s16_SymbolicAlgebra() {
 	};
 }
 
-function s17_IntervalArithmetic() {
+function IntervalArithmetic() {
 	addMath(BigFloat, 2);
 	addMath(BigDecimal, 10);
 
@@ -13965,7 +13944,7 @@ function s17_IntervalArithmetic() {
 	};
 }
 
-function s18_GF2() {
+function GF2() {
 	function GF2(a) {
 		this.a = a;
 	}
@@ -14040,7 +14019,7 @@ function s18_GF2() {
 	};
 }
 
-function s19_Trigonometry() {
+function Trigonometry() {
 	var Integer = Expression.Integer;
 	var Addition = Expression.Addition;
 	var Multiplication = Expression.Multiplication;
@@ -15107,7 +15086,7 @@ function s19_Trigonometry() {
 	};
 }
 
-function s20_ComplexNumbers() {
+function ComplexNumbers() {
 	var Integer = Expression.Integer;
 
 	function Complex(real, imaginary) {
@@ -15294,7 +15273,7 @@ function s20_ComplexNumbers() {
 	};
 }
 
-function s21_NonSimplifiedExpression() {
+function NonSimplifiedExpression() {
 	var idCounter = 0;
 
 	function NonSimplifiedExpression(e, position, length, input) {
@@ -15670,7 +15649,7 @@ function s21_NonSimplifiedExpression() {
 	self.NonSimplifiedExpression = NonSimplifiedExpression;
 }
 
-function s22_ExpressionParser() {
+function ExpressionParser() {
 	var LEFT_TO_RIGHT = 0;
 	var RIGHT_TO_LEFT = 1;
 
@@ -16902,7 +16881,7 @@ function s22_ExpressionParser() {
 	self.ExpressionParser = ExpressionParser;
 }
 
-function s23_BinaryHeap() {
+function BinaryHeap() {
 	function Heap(compareTo) {
 		this.data = [];
 		this.compareTo = compareTo;
@@ -16978,7 +16957,7 @@ function s23_BinaryHeap() {
 	self.Heap = Heap;
 }
 
-function s24_Polynomial() {
+function Polynomial() {
 	var isPrime = primeFactor._isPrime;
 
 	var freeze = function (x) {
@@ -20471,7 +20450,7 @@ function s24_Polynomial() {
 	};
 }
 
-function s25_MatrixClass() {
+function MatrixClass() {
 	function Matrix(data) {
 		this.a = data;
 	}
@@ -21475,7 +21454,7 @@ function s25_MatrixClass() {
 	self.Matrix = Matrix;
 }
 
-function s26_Combinations() {
+function Combinations() {
 	function combinations(n, k) {
 		n = n | 0;
 		k = k | 0;
@@ -21527,7 +21506,7 @@ function s26_Combinations() {
 	self.combinations = combinations;
 }
 
-function s27_BinaryPacking() {
+function BinaryPacking() {
 	var u8 = typeof Uint8Array !== 'undefined' ? new Uint8Array(4) : null;
 	var td = typeof TextDecoder !== 'undefined' ? new TextDecoder() : null;
 	var te = typeof TextEncoder !== 'undefined' ? new TextEncoder() : null;
@@ -21670,7 +21649,7 @@ function s27_BinaryPacking() {
 	globalThis.unpackBigInt17 = unpackBigInt17;
 }
 
-function s28_IntegerPolynomial() {
+function IntegerPolynomial() {
 	function makeArray(size) {
 
 		var x = new Array(size);
@@ -22323,7 +22302,7 @@ function s28_IntegerPolynomial() {
 	};
 }
 
-function s29_LLL() {
+function LLL() {
 	function Fraction(numerator, denominator) {
 		this.numerator = numerator;
 		this.denominator = denominator;
@@ -22571,7 +22550,7 @@ function s29_LLL() {
 	globalThis.LLL = LLL;
 }
 
-function s30_FastLLL() {
+function FastLLL() {
 	var floatTypeSize = 3;
 	var floatTypeMaxValue = 9007199254740992.0 * 0.5;
 	var floatTypeArray = function (buffer, offset, n) {
@@ -22957,7 +22936,7 @@ function s30_FastLLL() {
 	globalThis.l3fp = l3fp;
 }
 
-function s31_PolynomialFactorization() {
+function PolynomialFactorization() {
 	function toInt(c, p) {
 		if (p instanceof Expression.Integer || p instanceof Expression.Polynomial) {
 			return Expression.Integer.fromBigInt(c);
@@ -24676,7 +24655,7 @@ function s31_PolynomialFactorization() {
 	}
 }
 
-function s32_SeedRandom() {
+function SeedRandom() {
 	(function (global, pool, math) {
 
 		var width = 256,
@@ -24856,7 +24835,7 @@ function s32_SeedRandom() {
 	})((typeof self !== 'undefined') ? self : this, [], Math);
 }
 
-function s33_RealAlgebraicNumbers() {
+function RealAlgebraicNumbers() {
 	function SimpleFloat(significand, exponent) {
 		this.significand = significand;
 		this.exponent = exponent;
@@ -25853,7 +25832,7 @@ function s33_RealAlgebraicNumbers() {
 	self.LazyPolynomialRoot = LazyPolynomialRoot;
 }
 
-function s34_SomePolynomialRoot() {
+function SomePolynomialRoot() {
 	var usePolynomial = true;
 
 	function SomePolynomialRoot(e, polynomial, rootSymbol) {
@@ -26110,7 +26089,7 @@ function s34_SomePolynomialRoot() {
 	self.SomePolynomialRoot = SomePolynomialRoot;
 }
 
-function s35_PolynomialRootMath() {
+function PolynomialRootMath() {
 	Expression.PolynomialRootSymbol = function () {
 		throw new TypeError();
 	};
@@ -28048,7 +28027,7 @@ function s35_PolynomialRootMath() {
 	};
 }
 
-function s36_PolynomialWasm() {
+function PolynomialWasm() {
 	var wasmCodef32x4 = typeof Uint8Array !== 'undefined' ? new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 20, 2, 96, 4, 127, 127, 123, 127, 0, 96, 8, 127, 127, 127, 127, 127, 127, 127, 127, 1, 127, 2, 15, 1, 3, 101, 110, 118, 6, 109, 101, 109, 111, 114, 121, 2, 0, 0, 3, 3, 2, 0, 1, 7, 37, 1, 33, 114, 101, 115, 117, 108, 116, 97, 110, 116, 79, 102, 73, 110, 116, 101, 103, 101, 114, 80, 111, 108, 121, 110, 111, 109, 105, 97, 108, 115, 77, 111, 100, 80, 0, 1, 10, 232, 13, 2, 225, 3, 2, 9, 123, 4, 127, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 1, 0, 0, 0, 0, 0, 240, 63, 1, 0, 0, 0, 0, 0, 240, 63, 32, 2, 253, 95, 34, 6, 253, 243, 1, 34, 8, 253, 242, 1, 253, 117, 32, 6, 253, 242, 1, 253, 241, 1, 33, 9, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 1, 0, 0, 0, 0, 0, 240, 63, 1, 0, 0, 0, 0, 0, 240, 63, 32, 2, 32, 2, 253, 13, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 253, 95, 34, 7, 253, 243, 1, 34, 10, 253, 242, 1, 253, 117, 32, 7, 253, 242, 1, 253, 241, 1, 33, 11, 32, 0, 65, 3, 117, 33, 0, 3, 64, 32, 1, 32, 14, 74, 4, 64, 32, 0, 65, 3, 116, 43, 3, 0, 252, 2, 33, 15, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 4, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 5, 32, 0, 65, 1, 106, 65, 3, 116, 43, 3, 0, 252, 2, 34, 16, 65, 1, 107, 33, 13, 3, 64, 32, 13, 65, 0, 78, 4, 64, 32, 4, 32, 9, 32, 0, 65, 2, 106, 32, 13, 106, 65, 3, 116, 253, 10, 3, 0, 34, 12, 253, 135, 2, 34, 4, 32, 8, 253, 242, 1, 253, 117, 32, 6, 32, 4, 253, 136, 2, 33, 4, 32, 5, 32, 11, 32, 12, 253, 135, 2, 34, 5, 32, 10, 253, 242, 1, 253, 117, 32, 7, 32, 5, 253, 136, 2, 33, 5, 32, 13, 65, 1, 107, 33, 13, 12, 1, 11, 11, 32, 2, 32, 4, 253, 94, 32, 5, 253, 94, 34, 4, 32, 4, 253, 13, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 253, 80, 34, 4, 253, 229, 1, 32, 4, 32, 15, 65, 0, 72, 27, 34, 4, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 67, 32, 4, 32, 2, 253, 68, 253, 80, 253, 83, 4, 64, 0, 11, 32, 3, 32, 14, 106, 65, 4, 116, 32, 4, 253, 11, 4, 0, 32, 0, 65, 2, 106, 32, 16, 106, 33, 0, 32, 14, 65, 1, 106, 33, 14, 12, 1, 11, 11, 11, 130, 10, 2, 10, 123, 1, 127, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 32, 2, 65, 4, 116, 253, 0, 4, 0, 34, 11, 253, 231, 1, 33, 16, 32, 0, 32, 5, 32, 11, 32, 4, 16, 0, 32, 1, 32, 7, 32, 11, 32, 6, 16, 0, 32, 5, 32, 7, 72, 4, 64, 32, 5, 33, 0, 32, 4, 33, 1, 32, 6, 33, 4, 32, 7, 34, 5, 65, 1, 107, 32, 0, 34, 7, 65, 1, 107, 113, 33, 18, 32, 1, 33, 6, 11, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 33, 17, 3, 64, 32, 7, 65, 1, 107, 65, 0, 78, 4, 64, 32, 6, 32, 7, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 34, 13, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 65, 253, 83, 4, 64, 65, 1, 15, 11, 32, 13, 33, 8, 32, 11, 33, 9, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 33, 12, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 10, 3, 64, 32, 8, 32, 9, 253, 231, 1, 253, 106, 34, 14, 32, 9, 32, 8, 253, 134, 2, 33, 15, 32, 14, 32, 10, 32, 12, 253, 134, 2, 33, 14, 32, 9, 34, 8, 32, 15, 32, 15, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 55, 34, 15, 253, 82, 33, 9, 32, 10, 34, 12, 32, 14, 32, 15, 253, 82, 33, 10, 32, 15, 253, 164, 1, 65, 15, 71, 13, 0, 11, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 12, 253, 229, 1, 32, 12, 32, 8, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 67, 253, 82, 34, 8, 32, 11, 253, 228, 1, 32, 8, 32, 8, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 67, 253, 82, 33, 8, 65, 0, 33, 0, 3, 64, 32, 0, 32, 7, 72, 4, 64, 32, 0, 32, 6, 106, 65, 4, 116, 34, 1, 253, 0, 4, 0, 34, 9, 32, 8, 253, 230, 1, 34, 10, 32, 16, 253, 230, 1, 253, 104, 32, 11, 32, 10, 253, 134, 2, 33, 12, 32, 9, 32, 8, 32, 10, 253, 134, 2, 34, 9, 32, 11, 253, 228, 1, 33, 10, 32, 1, 32, 12, 32, 9, 32, 11, 253, 229, 1, 253, 229, 1, 32, 12, 32, 9, 253, 229, 1, 32, 12, 32, 9, 253, 67, 253, 82, 32, 12, 32, 10, 253, 229, 1, 32, 12, 32, 10, 253, 67, 253, 82, 253, 11, 4, 0, 32, 0, 65, 1, 106, 33, 0, 12, 1, 11, 11, 32, 5, 65, 1, 107, 33, 0, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 33, 8, 3, 64, 32, 0, 4, 64, 32, 0, 32, 0, 65, 1, 117, 34, 0, 32, 0, 106, 71, 4, 64, 32, 8, 32, 13, 253, 230, 1, 34, 9, 32, 16, 253, 230, 1, 253, 104, 32, 11, 32, 9, 253, 134, 2, 33, 10, 32, 8, 32, 13, 32, 9, 253, 134, 2, 34, 8, 32, 11, 253, 228, 1, 33, 9, 32, 10, 32, 8, 32, 11, 253, 229, 1, 253, 229, 1, 32, 10, 32, 8, 253, 229, 1, 32, 10, 32, 8, 253, 67, 253, 82, 32, 10, 32, 9, 253, 229, 1, 32, 10, 32, 9, 253, 67, 253, 82, 33, 8, 11, 32, 13, 32, 13, 253, 230, 1, 34, 9, 32, 16, 253, 230, 1, 253, 104, 32, 11, 32, 9, 253, 134, 2, 33, 10, 32, 13, 32, 13, 32, 9, 253, 134, 2, 34, 9, 32, 11, 253, 228, 1, 33, 12, 32, 10, 32, 9, 32, 11, 253, 229, 1, 253, 229, 1, 32, 10, 32, 9, 253, 229, 1, 32, 10, 32, 9, 253, 67, 253, 82, 32, 10, 32, 12, 253, 229, 1, 32, 10, 32, 12, 253, 67, 253, 82, 33, 13, 12, 1, 11, 11, 32, 17, 32, 8, 253, 230, 1, 34, 9, 32, 16, 253, 230, 1, 253, 104, 32, 11, 32, 9, 253, 134, 2, 33, 10, 32, 17, 32, 8, 32, 9, 253, 134, 2, 34, 8, 32, 11, 253, 228, 1, 33, 9, 32, 10, 32, 8, 32, 11, 253, 229, 1, 253, 229, 1, 32, 10, 32, 8, 253, 229, 1, 32, 10, 32, 8, 253, 67, 253, 82, 32, 10, 32, 9, 253, 229, 1, 32, 10, 32, 9, 253, 67, 253, 82, 33, 17, 32, 4, 33, 0, 32, 6, 33, 4, 65, 127, 33, 1, 32, 7, 4, 127, 32, 6, 32, 7, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 253, 66, 253, 83, 5, 65, 1, 11, 69, 4, 64, 32, 5, 33, 1, 3, 64, 32, 1, 32, 7, 78, 4, 64, 32, 0, 32, 1, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 33, 8, 32, 1, 32, 7, 107, 33, 2, 3, 64, 32, 1, 32, 2, 74, 4, 64, 32, 0, 32, 2, 106, 65, 4, 116, 34, 6, 253, 0, 4, 0, 33, 9, 32, 8, 32, 4, 32, 7, 106, 32, 2, 106, 32, 1, 107, 65, 4, 116, 253, 0, 4, 0, 34, 10, 253, 230, 1, 34, 12, 32, 16, 253, 230, 1, 253, 104, 32, 11, 32, 12, 253, 134, 2, 33, 13, 32, 8, 32, 10, 32, 12, 253, 134, 2, 34, 10, 32, 11, 253, 228, 1, 33, 12, 32, 6, 32, 9, 32, 11, 253, 228, 1, 32, 13, 32, 10, 32, 11, 253, 229, 1, 253, 229, 1, 32, 13, 32, 10, 253, 229, 1, 32, 13, 32, 10, 253, 67, 253, 82, 32, 13, 32, 12, 253, 229, 1, 32, 13, 32, 12, 253, 67, 253, 82, 34, 10, 253, 229, 1, 32, 9, 32, 10, 253, 229, 1, 32, 9, 32, 10, 253, 67, 253, 82, 253, 11, 4, 0, 32, 2, 65, 1, 106, 33, 2, 12, 1, 11, 11, 3, 64, 32, 1, 65, 0, 74, 4, 127, 32, 0, 32, 1, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 66, 253, 83, 5, 65, 1, 11, 69, 4, 64, 32, 1, 65, 1, 107, 33, 1, 12, 1, 11, 11, 12, 1, 11, 11, 11, 32, 7, 65, 1, 107, 34, 2, 65, 0, 74, 32, 1, 65, 1, 107, 65, 0, 78, 113, 4, 64, 32, 18, 32, 2, 32, 5, 65, 1, 107, 113, 115, 33, 18, 11, 32, 0, 33, 6, 32, 7, 33, 5, 32, 1, 33, 7, 12, 1, 11, 11, 32, 3, 65, 4, 116, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 11, 32, 17, 253, 229, 1, 32, 17, 32, 18, 65, 1, 113, 27, 32, 5, 65, 1, 71, 27, 253, 11, 4, 0, 65, 0, 11]) : null;
 	var wasmCodef32x4NoFMA = typeof Uint8Array !== 'undefined' ? new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 28, 3, 96, 4, 127, 127, 123, 127, 0, 96, 4, 123, 123, 123, 123, 1, 123, 96, 8, 127, 127, 127, 127, 127, 127, 127, 127, 1, 127, 2, 15, 1, 3, 101, 110, 118, 6, 109, 101, 109, 111, 114, 121, 2, 0, 0, 3, 4, 3, 0, 1, 2, 7, 37, 1, 33, 114, 101, 115, 117, 108, 116, 97, 110, 116, 79, 102, 73, 110, 116, 101, 103, 101, 114, 80, 111, 108, 121, 110, 111, 109, 105, 97, 108, 115, 77, 111, 100, 80, 0, 2, 10, 204, 13, 3, 237, 3, 2, 9, 123, 4, 127, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 1, 0, 0, 0, 0, 0, 240, 63, 1, 0, 0, 0, 0, 0, 240, 63, 32, 2, 253, 95, 34, 6, 253, 243, 1, 34, 8, 253, 242, 1, 253, 117, 32, 6, 253, 242, 1, 253, 241, 1, 33, 9, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 0, 0, 0, 0, 0, 0, 240, 66, 0, 0, 0, 0, 0, 0, 240, 66, 253, 12, 1, 0, 0, 0, 0, 0, 240, 63, 1, 0, 0, 0, 0, 0, 240, 63, 32, 2, 32, 2, 253, 13, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 253, 95, 34, 7, 253, 243, 1, 34, 10, 253, 242, 1, 253, 117, 32, 7, 253, 242, 1, 253, 241, 1, 33, 11, 32, 0, 65, 3, 117, 33, 0, 3, 64, 32, 1, 32, 14, 74, 4, 64, 32, 0, 65, 3, 116, 43, 3, 0, 252, 2, 33, 15, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 4, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 5, 32, 0, 65, 1, 106, 65, 3, 116, 43, 3, 0, 252, 2, 34, 16, 65, 1, 107, 33, 13, 3, 64, 32, 13, 65, 0, 78, 4, 64, 32, 4, 32, 9, 253, 242, 1, 32, 0, 65, 2, 106, 32, 13, 106, 65, 3, 116, 253, 10, 3, 0, 34, 12, 253, 240, 1, 34, 4, 32, 4, 32, 8, 253, 242, 1, 253, 117, 32, 6, 253, 242, 1, 253, 241, 1, 33, 4, 32, 5, 32, 11, 253, 242, 1, 32, 12, 253, 240, 1, 34, 5, 32, 5, 32, 10, 253, 242, 1, 253, 117, 32, 7, 253, 242, 1, 253, 241, 1, 33, 5, 32, 13, 65, 1, 107, 33, 13, 12, 1, 11, 11, 32, 2, 32, 4, 253, 94, 32, 5, 253, 94, 34, 4, 32, 4, 253, 13, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 253, 80, 34, 4, 253, 229, 1, 32, 4, 32, 15, 65, 0, 72, 27, 34, 4, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 67, 32, 4, 32, 2, 253, 68, 253, 80, 253, 83, 4, 64, 0, 11, 32, 3, 32, 14, 106, 65, 4, 116, 32, 4, 253, 11, 4, 0, 32, 0, 65, 2, 106, 32, 16, 106, 33, 0, 32, 14, 65, 1, 106, 33, 14, 12, 1, 11, 11, 11, 201, 2, 1, 4, 123, 32, 1, 253, 12, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 32, 1, 253, 230, 1, 34, 4, 32, 4, 32, 1, 253, 229, 1, 253, 229, 1, 34, 4, 253, 229, 1, 33, 5, 32, 0, 253, 12, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 32, 0, 253, 230, 1, 34, 6, 32, 6, 32, 0, 253, 229, 1, 253, 229, 1, 34, 6, 253, 229, 1, 33, 7, 32, 0, 32, 1, 253, 230, 1, 34, 0, 32, 6, 32, 4, 253, 230, 1, 253, 229, 1, 32, 6, 32, 5, 253, 230, 1, 253, 229, 1, 32, 7, 32, 4, 253, 230, 1, 253, 229, 1, 32, 7, 32, 5, 253, 230, 1, 253, 229, 1, 33, 1, 32, 2, 253, 12, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 32, 2, 253, 230, 1, 34, 4, 32, 4, 32, 2, 253, 229, 1, 253, 229, 1, 34, 4, 253, 229, 1, 33, 5, 32, 0, 253, 12, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 0, 8, 128, 69, 32, 0, 32, 3, 253, 230, 1, 253, 104, 34, 0, 253, 230, 1, 34, 3, 32, 3, 32, 0, 253, 229, 1, 253, 229, 1, 34, 3, 32, 4, 253, 230, 1, 253, 229, 1, 32, 3, 32, 5, 253, 230, 1, 253, 229, 1, 32, 0, 32, 3, 253, 229, 1, 34, 0, 32, 4, 253, 230, 1, 253, 229, 1, 32, 0, 32, 5, 253, 230, 1, 253, 229, 1, 34, 0, 32, 1, 32, 2, 253, 229, 1, 253, 229, 1, 32, 0, 32, 1, 253, 229, 1, 32, 0, 32, 1, 253, 67, 253, 82, 32, 0, 32, 1, 32, 2, 253, 228, 1, 34, 1, 253, 229, 1, 32, 0, 32, 1, 253, 67, 253, 82, 11, 143, 7, 2, 10, 123, 1, 127, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 32, 2, 65, 4, 116, 253, 0, 4, 0, 34, 10, 253, 231, 1, 33, 15, 32, 0, 32, 5, 32, 10, 32, 4, 16, 0, 32, 1, 32, 7, 32, 10, 32, 6, 16, 0, 32, 5, 32, 7, 72, 4, 64, 32, 5, 33, 0, 32, 4, 33, 1, 32, 6, 33, 4, 32, 7, 34, 5, 65, 1, 107, 32, 0, 34, 7, 65, 1, 107, 113, 33, 18, 32, 1, 33, 6, 11, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 33, 14, 3, 64, 32, 7, 65, 1, 107, 65, 0, 78, 4, 64, 32, 6, 32, 7, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 34, 11, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 65, 253, 83, 4, 64, 65, 1, 15, 11, 32, 11, 33, 8, 32, 10, 33, 9, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 33, 12, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 13, 3, 64, 32, 8, 32, 8, 32, 9, 253, 231, 1, 253, 106, 34, 8, 32, 9, 253, 230, 1, 253, 229, 1, 33, 17, 32, 12, 32, 8, 32, 13, 253, 230, 1, 253, 229, 1, 33, 16, 32, 9, 34, 8, 32, 17, 32, 17, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 55, 34, 17, 253, 82, 33, 9, 32, 13, 34, 12, 32, 16, 32, 17, 253, 82, 33, 13, 32, 17, 253, 164, 1, 65, 15, 71, 13, 0, 11, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 12, 253, 229, 1, 32, 12, 32, 8, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 67, 253, 82, 34, 8, 32, 10, 253, 228, 1, 32, 8, 32, 8, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 67, 253, 82, 33, 8, 65, 0, 33, 0, 3, 64, 32, 0, 32, 7, 72, 4, 64, 32, 0, 32, 6, 106, 65, 4, 116, 34, 1, 32, 1, 253, 0, 4, 0, 32, 8, 32, 10, 32, 15, 16, 1, 253, 11, 4, 0, 32, 0, 65, 1, 106, 33, 0, 12, 1, 11, 11, 32, 5, 65, 1, 107, 33, 0, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 33, 8, 3, 64, 32, 0, 4, 64, 32, 0, 32, 0, 65, 1, 117, 34, 0, 32, 0, 106, 71, 4, 64, 32, 8, 32, 11, 32, 10, 32, 15, 16, 1, 33, 8, 11, 32, 11, 32, 11, 32, 10, 32, 15, 16, 1, 33, 11, 12, 1, 11, 11, 32, 14, 32, 8, 32, 10, 32, 15, 16, 1, 33, 14, 32, 4, 33, 0, 32, 6, 33, 4, 65, 127, 33, 1, 32, 7, 4, 127, 32, 6, 32, 7, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 253, 12, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 253, 66, 253, 83, 5, 65, 1, 11, 69, 4, 64, 32, 5, 33, 1, 3, 64, 32, 1, 32, 7, 78, 4, 64, 32, 0, 32, 1, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 33, 8, 32, 1, 32, 7, 107, 33, 2, 3, 64, 32, 1, 32, 2, 74, 4, 64, 32, 8, 32, 4, 32, 7, 106, 32, 2, 106, 32, 1, 107, 65, 4, 116, 253, 0, 4, 0, 32, 10, 32, 15, 16, 1, 33, 9, 32, 0, 32, 2, 106, 65, 4, 116, 34, 6, 253, 0, 4, 0, 33, 11, 32, 6, 32, 11, 32, 10, 253, 228, 1, 32, 9, 253, 229, 1, 32, 11, 32, 9, 253, 229, 1, 32, 11, 32, 9, 253, 67, 253, 82, 253, 11, 4, 0, 32, 2, 65, 1, 106, 33, 2, 12, 1, 11, 11, 3, 64, 32, 1, 65, 0, 74, 4, 127, 32, 0, 32, 1, 106, 65, 1, 107, 65, 4, 116, 253, 0, 4, 0, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 253, 66, 253, 83, 5, 65, 1, 11, 69, 4, 64, 32, 1, 65, 1, 107, 33, 1, 12, 1, 11, 11, 12, 1, 11, 11, 11, 32, 7, 65, 1, 107, 34, 2, 65, 0, 74, 32, 1, 65, 1, 107, 65, 0, 78, 113, 4, 64, 32, 18, 32, 2, 32, 5, 65, 1, 107, 113, 115, 33, 18, 11, 32, 0, 33, 6, 32, 7, 33, 5, 32, 1, 33, 7, 12, 1, 11, 11, 32, 3, 65, 4, 116, 253, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 10, 32, 14, 253, 229, 1, 32, 14, 32, 18, 65, 1, 113, 27, 32, 5, 65, 1, 71, 27, 253, 11, 4, 0, 65, 0, 11]) : null;
 
@@ -28328,7 +28307,7 @@ function s36_PolynomialWasm() {
 	};
 }
 
-function s38_Eigenvalues() {
+function Eigenvalues() {
 	globalThis.factorsMap = new Map();
 
 	Expression.getPolynomialRootsWithSteps = function (polynomial, callback, flag0) {
@@ -28703,7 +28682,7 @@ function s38_Eigenvalues() {
 	};
 }
 
-function s39_ConditionClass() {
+function ConditionClass() {
 	function Condition(array) {
 		Object.freeze(array);
 		this.array = array;
@@ -29602,7 +29581,7 @@ function s39_ConditionClass() {
 	self.Condition = Condition;
 }
 
-function s40_MathMLRendering() {
+function MathMLRendering() {
 	Polynomial.prototype.toString = function (options) {
 		options = options || {};
 		return this.toExpression(options.polynomialVariable || new Expression.Symbol("x")).toString(options);
@@ -30295,7 +30274,7 @@ function s40_MathMLRendering() {
 	};
 }
 
-function s41_QuadraticInteger() {
+function QuadraticInteger() {
 	function abs(a) {
 		return JSBI.lessThan(a, JSBI.BigInt(0)) ? JSBI.subtract(JSBI.BigInt(0), a) : a;
 	}
@@ -30818,7 +30797,7 @@ function s41_QuadraticInteger() {
 	};
 }
 
-function s42_MatrixExpressions() {
+function MatrixExpressions() {
 	var getTableFromAsciiMathMatrix = function (input) {
 
 		var rows = [[]];
@@ -31233,12 +31212,12 @@ function s42_MatrixExpressions() {
 	};
 
 	Expression.someDetailsNew = {
-		"determinant2x2": "<span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[1,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,1],[1,0]]\"><math><mrow><mo>|</mo><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr></mtable><mo>|</mo></mrow><mo>=</mo><mrow><mrow style=\"color: #D64040\"><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&minus;</mo><mrow style=\"color: #4040D6\"><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow></mrow></math></span></span>${link}",
+		"determinant2x2": "<span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[1,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,1],[1,0]]\"><math><mrow><mo>|</mo><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr></mtable><mo>|</mo></mrow><mo>=</mo><mrow><mrow style=\"color: #D64040\"><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&minus;</mo><mrow style=\"color: #4040D6\"><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow></mrow></math></span></span>",
 		"determinant3x3": "<math><mrow><mo>|</mo><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd></mtr></mtable><mo>|</mo></mrow></math><math><mo>=</mo></math>",
 		"matrix3x3": "<math><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd></mtr></mtable></math>",
-		"determinantTriangle": "${determinant3x3}<table class=\"some-details-table\"><tr><td><math><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[1,1],[2,2]]\">${matrix3x3}</span></td></tr><tr><td><math><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,1],[1,2],[2,0]]\">${matrix3x3}</span></span></td></tr><tr><td><math><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,2],[1,0],[2,1]]\">${matrix3x3}</span></span></span></td></tr><tr><td><math><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,0],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[2,0],[1,1],[0,2]]\">${matrix3x3}</span></span></span></span></td></tr><tr><td><math><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,0],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1\" data-cells=\"[[2,0],[1,1],[0,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[2,1],[1,2],[0,0]]\">${matrix3x3}</span></span></span></span></span></td></tr><tr><td><math><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></math>${link}</td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,0],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1\" data-cells=\"[[2,0],[1,1],[0,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1\" data-cells=\"[[2,1],[1,2],[0,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[2,2],[1,0],[0,1]]\">${matrix3x3}</span></span></span></span></span></span></td></tr></table>",
+		"determinantTriangle": "${determinant3x3}<table class=\"some-details-table\"><tr><td><math><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[1,1],[2,2]]\">${matrix3x3}</span></td></tr><tr><td><math><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,1],[1,2],[2,0]]\">${matrix3x3}</span></span></td></tr><tr><td><math><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,2],[1,0],[2,1]]\">${matrix3x3}</span></span></span></td></tr><tr><td><math><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,0],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[2,0],[1,1],[0,2]]\">${matrix3x3}</span></span></span></span></td></tr><tr><td><math><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,0],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1\" data-cells=\"[[2,0],[1,1],[0,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[2,1],[1,2],[0,0]]\">${matrix3x3}</span></span></span></span></span></td></tr><tr><td><math><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,0],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1\" data-cells=\"[[2,0],[1,1],[0,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1\" data-cells=\"[[2,1],[1,2],[0,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[2,2],[1,0],[0,1]]\">${matrix3x3}</span></span></span></span></span></span></td></tr></table>",
 		"matrix5x3": "<math><mtable><mtr><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd><mtd style=\"color: #808080; border-left: 1px dashed;\"><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd style=\"color: #808080\"><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd><mtd style=\"color: #808080; border-left: 1px dashed;\"><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd style=\"color: #808080\"><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mtd><mtd style=\"color: #808080; border-left: 1px dashed;\"><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mtd><mtd style=\"color: #808080\"><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mtd></mtr></mtable></math>",
-		"determinantSarrus": "${determinant3x3}<table class=\"some-details-table\"><tr><td><math><mrow><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,1],[1,2],[2,3]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,2],[1,3],[2,4]]\">${matrix5x3}</span></span></span></td></tr><tr><td><math><mrow><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&minus;</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&minus;</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow></math>${link}</td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,3]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,3],[2,4]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,2],[1,1],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,3],[1,2],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,4],[1,3],[2,2]]\">${matrix5x3}</span></span></span></span></span></span></td></tr></table>",
+		"determinantSarrus": "${determinant3x3}<table class=\"some-details-table\"><tr><td><math><mrow><mrow><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,1],[1,2],[2,3]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,2],[1,3],[2,4]]\">${matrix5x3}</span></span></span></td></tr><tr><td><math><mrow><mrow><mo>&minus;</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>1</mn></mrow></msub></mrow><mo>&minus;</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>3</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>2</mn></mrow></msub></mrow><mo>&minus;</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>&ic;</mo><mn>2</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>&ic;</mo><mn>1</mn></mrow></msub><mo>&sdot;</mo><msub><mi>a</mi><mrow><mn>3</mn><mo>&ic;</mo><mn>3</mn></mrow></msub></mrow></math></td><td><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,0],[1,1],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,1],[1,2],[2,3]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"0\" data-cells=\"[[0,2],[1,3],[2,4]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,2],[1,1],[2,0]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,3],[1,2],[2,1]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,4],[1,3],[2,2]]\">${matrix5x3}</span></span></span></span></span></span></td></tr></table>",
 		"someDetails3": "<span data-custom-paint=\"custom-menclose\" data-color=\"0a\" data-cells=\"[[0,0],[2,2]]\"><span data-custom-paint=\"custom-menclose\" data-color=\"1a\" data-cells=\"[[0,2],[2,0]]\"><math><mtable><mtr><mtd style=\"font-weight: bolder; border: 1px solid; border-radius: 50%;\"><msub><mi>a</mi><mrow><mi>r</mi><mo>,</mo><mi>c</mi></mrow></msub></mtd><mtd><mtext>&hellip;</mtext></mtd><mtd><msub><mi>a</mi><mrow><mi>r</mi><mo>,</mo><mi>j</mi></mrow></msub></mtd></mtr><mtr><mtd><mtext>&vellip;</mtext></mtd><mtd></mtd><mtd><mtext>&vellip;</mtext></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>i</mi><mo>,</mo><mi>c</mi></mrow></msub></mtd><mtd><mtext>&hellip;</mtext></mtd><mtd><msub><mi>a</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mtd></mtr></mtable></math></span></span>",
 		"": ""
 	};
@@ -31353,26 +31332,24 @@ function s42_MatrixExpressions() {
 			}, printOptions) + '</math>';
 			var title = i18n['eigen.vectors.forMatrixA'] || "";
 			html += '<p>' + title.replaceAll('`A`', '<math>' + Expression.p('A') + '</math>') + '</p>';
-			html += '<ul>';
+
 			var eigenvalues = Expression.getEigenvalues(matrix);
 			var eigenvectors = Expression.getEigenvectors(matrix, eigenvalues);
 			var uniqueEigenvalues = Expression.unique(eigenvalues);
+
 			for (var i = 0; i < eigenvectors.length; i += 1) {
 				if (eigenvectors[i] != null) {
 					var x = eigenvalues[i];
 					var j = uniqueEigenvalues.indexOf(x);
-					html += '<li>';
-					var v = eigenvectors[i];
-					html += '<math>' + Expression.p('v=x', {
-						v: new Expression.MatrixSymbol('v'),
-						x: new Expression.Matrix(v)
-					}, printOptions) + '</math>' + ', ' + i18n['eigen.jordanValue'].toLocaleLowerCase() + ' ' + '<math>' + Expression.p('λ_' + (j + 1) + '=x', {
-						x: x
-					}, printOptions) + '</math>';
-					html += '</li>';
+
+					html += '<p>' +
+						'<math>' + Expression.p('λ_' + (j + 1) + '=x', { x: x }, printOptions) + '</math>' +
+						', ' +
+						'<math>' + Expression.p('v=x', { v: new Expression.MatrixSymbol('v'), x: new Expression.Matrix(eigenvectors[i]) }, printOptions) + '</math>' +
+						'</p>';
 				}
 			}
-			html += '</ul>';
+
 			var detailsHTML = createDetailsSummary(printOptions.idPrefix, [{
 				type: 'steps-to-find-eigenvectors',
 				matrix: matrix.toString(),
@@ -31539,7 +31516,7 @@ function s42_MatrixExpressions() {
 		maxRows: 3,
 		priority: 2,
 		callback: function (printOptions, matrix) {
-			return determinant3x3(printOptions, matrix, Expression.getSomeDetails("determinantSarrus").replace(/\$\{link\}/g, i18n['link.sarrusRule']));
+			return determinant3x3(printOptions, matrix, Expression.getSomeDetails("determinantSarrus"));
 		}
 	});
 
@@ -31552,7 +31529,7 @@ function s42_MatrixExpressions() {
 		maxRows: 3,
 		priority: 3,
 		callback: function (printOptions, matrix) {
-			return determinant3x3(printOptions, matrix, Expression.getSomeDetails("determinantTriangle").replace(/\$\{link\}/g, i18n['link.triangleRule']));
+			return determinant3x3(printOptions, matrix, Expression.getSomeDetails("determinantTriangle"));
 		}
 	});
 
@@ -31734,7 +31711,7 @@ function s42_MatrixExpressions() {
 		var systemId = containerId + "-" + "system_1";
 		var mstr = "";
 		if (!m.eql(Matrix.Zero(m.rows(), m.cols()))) {
-			mstr += "<div class=\"anchor\" id=\"" + systemId + "\">" + "<table role=\"presentation\" class=\"system-table\">" + "<tr>" + "<td>" + "<math>" + outSystem(printOptions, m, variableNames) + "</math>" + "</td>" + "<td>" + "<a href=\"#" + systemId + "\">(" + localeString(1) + ")</a>" + "</td>" + "</tr>" + "</table>" + "</div>";
+			mstr += "<div class=\"anchor\">" + "<table role=\"presentation\" class=\"system-table\">" + "<tr>" + "<td>" + "<math>" + outSystem(printOptions, m, variableNames) + "</math>" + "</td>" + "</tr>" + "</table>" + "</div>";
 		}
 		var isEquals = function (a, b) {
 			if (a.length !== b.length) {
@@ -31760,7 +31737,7 @@ function s42_MatrixExpressions() {
 
 			mstr += "<li>";
 			mstr += "<div>";
-			mstr += i18n['system.findVariableFromEquation'].replace(/\$\{i\}/g, "<math>" + Expression.p(i + 1) + "</math>").replace(/\$\{x\}/g, "<math>" + new Expression.Symbol(variableNames[j]).toMathML(printOptions) + "</math>").replace(/\$\{#system_1\}/g, "<a href=\"#" + systemId + "\">(" + localeString(1) + ")</a>");
+			mstr += i18n['system.findVariableFromEquation'].replace(/\$\{i\}/g, "<math>" + Expression.p(i + 1) + "</math>").replace(/\$\{x\}/g, "<math>" + new Expression.Symbol(variableNames[j]).toMathML(printOptions) + "</math>");
 			mstr += "</div>";
 			mstr += "<div>";
 
@@ -31939,66 +31916,31 @@ function s42_MatrixExpressions() {
 
 	var polynomialRootsCallback = function (info, printOptions) {
 		var result = "";
-		var link = "";
-		if (info.type === "useTheRationalRootTest") {
-			link = i18n['link.rationalRootTest'];
-		} else if (info.type === "solveQuadraticEquation") {
-			link = i18n['link.quadraticEquation'];
-		} else if (info.type === "solvePalindromicEquaion") {
-			link = i18n['link.palindromicEquation'];
-		} else if (info.type === "(ax+b)**n") {
-			link = i18n['link.binomialTheorem'];
-		} else if (info.type === "solveCubicEquation") {
 
-			link = i18n['link.cubicEquation'];
-		} else if (info.type === "solveQuarticEcuation") {
-
-			link = i18n['link.quarticEquation'];
-		} else if (info.type === "methodOfKronecker") {
-
-			link = i18n['link.kroneckerMethod'];
-		} else if (info.type === "applyDifferenceOfSquaresRule") {
-			link = i18n['link.differenceOfSquares'];
-		} else if (info.type === "applyDifferenceOfCubesRule") {
-			link = i18n['link.differenceOfCubes'];
-		} else if (info.type === "applyDifferenceOfNthPowersRule") {
-			link = i18n['link.differenceOfNthPowers'];
-		} else if (info.type === "factorOutTheGreatestCommonFactor") {
-
-		} else if (info.type === "solveLinearEquation") {
-			return "";
-		} else if (info.type === "eliminationOfTheSubDominantTerm") {
-			link = "https://en.wikipedia.org/wiki/Algebraic_equation#Elimination_of_the_sub-dominant_term";
-			var title = "Elimination of the sub-dominant term";
-
+		if (info.type === "eliminationOfTheSubDominantTerm") {
 			var tmp = Expression.p("x=t-b/(n*a)", {
 				b: info.b,
 				n: Expression.Integer.fromNumber(info.n),
 				a: info.a
 			}, printOptions);
-			result = '<munder accentunder="true"><mo>=</mo><munder accentunder="true"><mrow>' + tmp + '</mrow><mtext><a href="' + link + '" title="' + title + '">(?)</a></mtext></munder></munder>';
-		} else if (info.type === "realRootIsolationAndNewton'sMethod") {
-
-			link = i18n['math.newtonMethod'];
-			link = '<span style="max-width:9em;max-width:min-content;display:block;min-width:5em;">' + link + '</span>';
-			result = link === "" ? "<mo>&asymp;</mo>" : "<munder accentunder=\"true\"><mo>&asymp;</mo><mtext>" + link + "</mtext></munder>";
-		} else {
-
-			if (info.type !== "t = x^g") {
-				console.assert(false);
-			}
+			result = '<munder accentunder="true"><mo>=</mo><munder accentunder="true"><mrow>' + tmp + '</mrow><mtext></mtext></munder></munder>';
 		}
+		if (info.type === "realRootIsolationAndNewton'sMethod") {
+			result = "<munder accentunder=\"true\"><mo>&asymp;</mo></munder>";
+		}
+
 		if (result === "") {
-			if (info.type === "t = x^g" || link === "" && (info.type === "applyDifferenceOfSquaresRule" || info.type === "applyDifferenceOfCubesRule" || info.type === "applyDifferenceOfNthPowersRule")) {
+			if (info.type === "t = x^g" || (info.type === "applyDifferenceOfSquaresRule" || info.type === "applyDifferenceOfCubesRule" || info.type === "applyDifferenceOfNthPowersRule")) {
 				var variableName = printOptions.polynomialVariable;
 				result += "<munder accentunder=\"true\"><mo>=</mo><mrow><mi>t</mi><mo>=</mo><msup><mi>${x}</mi><mn>${g}</mn></msup></mrow></munder>".replace(/\$\{x\}/g, variableName).replace(/\$\{g\}/g, localeString(info.g));
-			} else {
-				result += link === "" ? "<mo>=</mo>" : "<munder accentunder=\"true\"><mo>=</mo><mtext>" + link + "</mtext></munder>";
+			}
+			else {
+				result += "<mo>=</mo>";
 			}
 		}
-		result += Polynomial.toM1(info.content, info.newPolynomial, info.roots).toMathML(Object.assign({}, printOptions, info.newPolynomialVariable != undefined ? {
-			polynomialVariable: info.newPolynomialVariable
-		} : {}));
+
+		result += Polynomial.toM1(info.content, info.newPolynomial, info.roots).toMathML(Object.assign({}, printOptions, info.newPolynomialVariable != undefined ? { polynomialVariable: info.newPolynomialVariable } : {}));
+
 		return result;
 	};
 
@@ -32117,7 +32059,7 @@ function s42_MatrixExpressions() {
 			html += "<div>";
 			html += "<math>" + Expression.p("A*v=λ*v", args, {}) + "</math>";
 			html += " ";
-			html += i18n['link.eigenvalueEquation'];
+			html += "";
 			html += "</div>";
 
 			html += "<div>";
@@ -32387,42 +32329,40 @@ function s42_MatrixExpressions() {
 		return html;
 	};
 
-	function Comlink() {}
-	Comlink.expose = function (api) {
-		self.onmessage = function (event) {
-			const data = event.data;
-			const id = data.id;
-			const name = data.name;
-			const args = data.args;
-			let result = undefined;
-			let error = undefined;
+	self.onmessage = function (event) {
+		const { id, name, args } = event.data;
 
-			try {
-				result = id === -1 ? Object.keys(api) : api[name].apply(null, args);
+		if (id === undefined || !name || !args) {
+			console.error("Worker received invalid message format:", event.data);
+			if (id !== undefined) {
+				self.postMessage({ id: id, result: undefined, error: { message: "Invalid message format" } });
 			}
-			catch (e) {
-				error = { message: e.message, name: e.name, stack: e.stack };
-			}
+			return;
+		}
 
-			self.postMessage({ id: id, result: result, error: error });
-		};
+		let result = undefined;
+		let error = undefined;
+
+		try {
+			if (name === 'runExpression') {
+				result = ExpressionParser.runExpression(...args);
+			}
+			else {
+				console.warn(`Worker received unknown command: ${name}`);
+				error = { message: `Unknown command: ${name}` };
+			}
+		} catch (e) {
+			console.error(`Worker error executing ${name}:`, e);
+			error = { message: e.message, name: e.name, stack: e.stack };
+		}
+
+		self.postMessage({ id: id, result: result, error: error });
 	};
 
-	var api = {
-		toMathML: ExpressionParser.toMathML,
-		getDetails: ExpressionParser.getDetails,
-		runExpression: ExpressionParser.runExpression,
-		checkTableInputValidity: ExpressionParser.checkExpression,
-		checkTextInputValidity: ExpressionParser.checkExpressions,
-		getElementsArray: ExpressionParser.getElementsArray,
-		getMatrix: ExpressionParser.getMatrix,
-		getPositionInfo: ExpressionParser.getPositionInfo
-	};
-
-	Comlink.expose(api);
+	console.log("Math Worker ready.");
 }
 
-function s43_LinearSystems() {
+function LinearSystems() {
 	Expression.rowReduceChangeToHTMLMontante = function (args, printOptions, containerId, k, stepCondition) {
 		var tooltipId = 'tooltip-' + containerId + '-' + k;
 		var t = function (r, c, k) {
