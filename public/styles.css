@@ -1,0 +1,582 @@
+﻿:root {
+    font-family: "Segoe UI", Roboto, serif;
+    font-size: 18px;
+    line-height: 1.5;
+    --color-text: #333;
+}
+
+code {
+    display: inline-block;
+    text-indent: 0;
+    margin: 0 2px;
+    padding: 1px 0.25em;
+    border: 1px solid #858585;
+    font-weight: bolder;
+    border-radius: 2px;
+    line-height: 1.25;
+}
+
+math {
+    display: inline-block;
+}
+
+math[display="block"] {
+    display: block;
+    padding: 0.5ex 1em;
+    text-align: left;
+}
+
+munder {
+    text-align: center;
+}
+
+munder[accentunder="true"] {
+    font-size: inherit;
+}
+
+munder[accentunder="true"] > mo {
+    margin: 0.5ex 0;
+}
+
+mtable[columnalign="left"] > mtr > mtd {
+    text-align: left;
+}
+
+mtable[columnalign="right"] > mtr > mtd {
+    text-align: right;
+}
+
+mn:has(> span) {
+    display: inline-block;
+}
+
+.root-math math {
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.root-math mrow:has(> *:not(mo):first-child) {
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+mrow[tabindex],
+mtd[tabindex] {
+    color: #73a8ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div[tabindex],
+mrow[tabindex][data-matrix] {
+    color: black;
+}
+
+details {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+details > summary {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 2px 0;
+}
+
+details > summary::marker,
+details > summary::-webkit-details-marker {
+    width: 0;
+    margin: 0;
+    display: none;
+    color: var(--color-text);
+}
+
+details > summary:before {
+    content: "►";
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    color: var(--color-text);
+}
+details[open] > summary:before {
+    content: "▼";
+}
+details > summary:hover,
+details > summary:focus {
+    background-color: hsl(204, 15%, 25%);
+    color: white;
+    text-decoration: underline;
+}
+
+.some-details-table {
+    vertical-align: top;
+    display: inline-table;
+}
+
+.some-details-table > tbody > tr > td:first-child {
+    text-align: left;
+    padding-bottom: 0.5em;
+    border-right: 2px solid #cb8087;
+}
+
+.system-table > tbody > tr > td {
+    vertical-align: baseline;
+}
+
+.anchor-table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.tooltip-dialog {
+    padding: 1em;
+    z-index: 100;
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.4);
+}
+
+.tooltip-dialog[open] {
+    display: block;
+}
+
+span[data-custom-paint="custom-menclose"] {
+    display: inline-block;
+    text-indent: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.arrow-with-label {
+    display: inline-block;
+    vertical-align: baseline;
+    padding-left: 16px;
+    position: relative;
+}
+
+.arrow-with-label[data-type="divide"] {
+    padding-left: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 12px;
+}
+
+.arrow-head-top,
+.arrow-head-bottom {
+    position: absolute;
+    left: -1.5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 8px 4px 0;
+    border-color: transparent;
+    border-right-color: black;
+}
+.arrow-head-top {
+    top: -3.5px;
+}
+.arrow-head-bottom {
+    bottom: -3.5px;
+}
+
+.arrow-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid black;
+    border-left: 0;
+}
+
+.question-icon-new {
+    text-align: center;
+    width: 1em;
+    display: inline-block;
+    background-color: #73a8ff;
+    color: black;
+    border-radius: 50%;
+    font-size: 75%;
+    cursor: pointer;
+}
+
+.nowrap {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 32px;
+}
+
+.indented {
+    margin-left: 12px;
+    border-left: 1px solid gray;
+    padding-left: 12px;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.app-reset-button-wrapper {
+    cursor: pointer;
+    user-select: none;
+    margin-right: 15px;
+}
+
+.app-title {
+    font-size: 2.2rem;
+    color: #1976d2;
+    margin: 0;
+}
+
+.expression-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.expression-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.expression-card-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+
+.expression-card-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.button-base {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+.button-base:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.button-base:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+
+.button-delete {
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+.button-delete:hover:not(:disabled) {
+    background-color: #f8d7da;
+}
+
+.button-edit {
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+.button-edit:hover:not(:disabled) {
+    background-color: #d1ecf1;
+}
+
+.button-save {
+    border-color: #c3e6cb;
+    color: #155724;
+    background-color: #d4edda;
+}
+.button-save:hover:not(:disabled) {
+    background-color: #c3e6cb;
+}
+
+.button-cancel:hover:not(:disabled) {
+    background-color: #e2e6ea;
+}
+
+.expression-display {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fafafa;
+}
+
+.expression-code {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    border: 1px solid #eee;
+    display: inline-block;
+    word-break: break-all;
+}
+
+.result-container {
+    padding: 15px;
+    min-height: 50px;
+}
+
+.result-display {
+    overflow-x: auto;
+}
+.result-display .error-text {
+    color: red;
+}
+
+.loading-indicator {
+    font-style: italic;
+    color: #666;
+}
+
+.calculate-button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.calculate-button:hover {
+    background-color: #45a049;
+}
+
+.editor-area {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 1.4;
+}
+
+.error-message {
+    color: red;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #ffebeb;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.tab-content-empty {
+    text-align: center;
+    color: #666;
+    padding: 40px 0;
+    font-style: italic;
+}
+
+.tab-content-add-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #f5f5f5;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    color: #666;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.tab-content-add-button:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+.tabbed-math-content {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.tab-nav {
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    overflow-x: auto;
+    align-items: center;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.tab-button {
+    padding: 10px 16px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    max-width: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+}
+.tab-button:hover {
+    background-color: #eee;
+}
+
+.tab-button-active {
+    color: #1976d2;
+    background: #fff;
+    border-bottom: 2px solid #1976d2;
+}
+.tab-button-active:hover {
+    background-color: #fff;
+}
+
+.tab-content-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tab-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 4px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.tab-edit-icon {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0 4px;
+    color: #999;
+    display: inline-block;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+.tab-edit-icon:hover {
+    color: #333;
+}
+
+.tab-close-button {
+    margin-left: 4px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+}
+.tab-close-button:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.tab-add-button {
+    padding: 10px 15px;
+    background: #e3f2fd;
+    border: none;
+    border-radius: 4px;
+    color: #1976d2;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+.tab-add-button:hover {
+    background-color: #bbdefb;
+}
+
+.tab-input {
+    border: 1px solid #1976d2;
+    padding: 2px 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    height: 20px;
+    box-sizing: border-box;
+    outline: none;
+    flex-grow: 1;
+    min-width: 50px;
+    width: 100%;
+}
+
+.tab-content-area {
+    min-height: 300px;
+    padding: 20px;
+}
