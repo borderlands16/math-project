@@ -282,7 +282,7 @@ const expressionStore = create(
 						undefined,
 						{
 							idPrefix: `expr-res-${expressionId}`,
-							rounding: expressionData.printOptions?.rounding,
+							
 						}
 					);
 
